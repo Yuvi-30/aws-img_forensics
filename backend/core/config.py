@@ -4,8 +4,9 @@ class Settings(BaseSettings):
     APP_NAME: str = "AI Image Forensics"
     DEBUG: bool = False
 
-    # GCP
-    GCS_BUCKET: str = "ai-forensics-bucket"
+    # AWS
+    AWS_REGION: str = "us-east-1"
+    S3_BUCKET: str = "ai-forensics-bucket"
 
     # Model
     MODEL_NAME: str = "umm-maybe/AI-image-detector"
