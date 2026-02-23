@@ -1,3 +1,4 @@
+from typing import Optional
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
@@ -5,14 +6,15 @@ class Settings(BaseSettings):
     DEBUG: bool = False
 
     # AWS
-    AWS_REGION: str = "us-east-1"
+    AWS_REGION: str = "eu-north-1"
     S3_BUCKET: str = "ai-forensics-bucket"
+    AWS_ACCESS_KEY_ID: Optional[str] = None
+    AWS_SECRET_ACCESS_KEY: Optional[str] = None
 
     # Model
-    MODEL_NAME: str = "google/vit-base-patch16-224"
+    MODEL_NAME: str = "umm-maybe/AI-image-detector"
     MODEL_CACHE_DIR: str = "/app/model_cache"
 
-    # DB
     DB_PATH: str = "/app/data/jobs.db"
 
     class Config:
