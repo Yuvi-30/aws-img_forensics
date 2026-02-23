@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     S3_BUCKET: str = "ai-forensics-bucket"
 
     # Model
-    MODEL_NAME: str = "umm-maybe/AI-image-detector"
+    MODEL_NAME: str = "google/vit-base-patch16-224"
     MODEL_CACHE_DIR: str = "/app/model_cache"
 
     # DB
